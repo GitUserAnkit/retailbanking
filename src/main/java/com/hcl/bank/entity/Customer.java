@@ -1,11 +1,13 @@
 package com.hcl.bank.entity;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -25,6 +27,19 @@ public class Customer implements Serializable {
 	private String accountType;
 	private Double balance;
 	private String ifscCode;
+	
+	@OneToMany
+	List<Beneficiary> beneficiaryArr;
+
+	
+	
+	public List<Beneficiary> getBeneficiaryArr() {
+		return beneficiaryArr;
+	}
+
+	public void setBeneficiaryArr(List<Beneficiary> beneficiaryArr) {
+		this.beneficiaryArr = beneficiaryArr;
+	}
 
 	public Customer() {
 
