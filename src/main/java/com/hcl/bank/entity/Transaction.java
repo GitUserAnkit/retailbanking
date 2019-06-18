@@ -20,8 +20,8 @@ public class Transaction {
 	private long id;
 	
 	@ManyToOne
-	@JoinColumn(name = "customerId")
-	private Customer customer;
+	@JoinColumn(name = "customer_id")
+	private Customer customer2;
 	
 	@Column (name = "beneficiary_acc")
 	private long toAccNo;
@@ -53,14 +53,14 @@ public class Transaction {
 	 * @return the customer
 	 */
 	public Customer getCustomer() {
-		return customer;
+		return customer2;
 	}
 
 	/**
 	 * @param customer the customer to set
 	 */
 	public void setCustomer(Customer customer) {
-		this.customer = customer;
+		this.customer2 = customer;
 	}
 
 	/**

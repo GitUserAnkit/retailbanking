@@ -22,8 +22,8 @@ public class Beneficiary {
 	private long id;
 	
 	@ManyToOne
-	@JoinColumn(name = "customerId")
-	private Customer customer;
+	@JoinColumn(name = "customer_id")
+	private Customer customer1;
 	
 	@Column (name = "beneficiary_acc")
 	private long beneficiaryAccNo;
@@ -32,7 +32,7 @@ public class Beneficiary {
 	private String beneficiaryIfscCode;
 	
 	@Column (name = "name")
-	private String Name;
+	private String name;
 
 	/**
 	 * @return the id
@@ -52,14 +52,14 @@ public class Beneficiary {
 	 * @return the customer
 	 */
 	public Customer getCustomer() {
-		return customer;
+		return customer1;
 	}
 
 	/**
 	 * @param customer the customer to set
 	 */
 	public void setCustomer(Customer customer) {
-		this.customer = customer;
+		this.customer1 = customer;
 	}
 
 	/**
@@ -94,14 +94,14 @@ public class Beneficiary {
 	 * @return the name
 	 */
 	public String getName() {
-		return Name;
+		return name;
 	}
 
 	/**
 	 * @param name the name to set
 	 */
 	public void setName(String name) {
-		Name = name;
+		name = name;
 	}
 	
 	

@@ -3,6 +3,7 @@ package com.hcl.bank.entity;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,6 +21,7 @@ public class Customer implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "customer_id")
 	private Long customerId;
 	private String username;
 	private String password;
@@ -28,10 +30,10 @@ public class Customer implements Serializable {
 	private Double balance;
 	private String ifscCode;
 	
-	@OneToMany (mappedBy = "customer")
+	@OneToMany (mappedBy = "customer1")
 	private List<Beneficiary> beneficiary;
 	
-	@OneToMany (mappedBy = "customer")
+	@OneToMany (mappedBy = "customer2")
 	private List<Transaction> transaction;
 
 	public Customer() {
