@@ -1,18 +1,15 @@
-package com.hcl.bank.entity;
+package com.hcl.bank.dto;
 
 import java.io.Serializable;
-import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
-@Entity
-@Table(name = "customer")
-public class Customer implements Serializable {
+
+public class CustomerDto implements Serializable {
 
 	/**
 	 * 
@@ -27,21 +24,12 @@ public class Customer implements Serializable {
 	private String accountType;
 	private Double balance;
 	private String ifscCode;
-	
 
-/*	public List<Transaction> getTransactions() {
-		return transactions;
-	}
-
-	public void setTransactions(List<Transaction> transactions) {
-		this.transactions = transactions;
-	}*/
-
-	public Customer() {
+	public CustomerDto() {
 
 	}
 
-	public Customer(Long customerId, String username, String password, Long accountNo, String accountType,
+	public CustomerDto(Long customerId, String username, String password, Long accountNo, String accountType,
 			Double balance, String ifscCode) {
 		super();
 		this.customerId = customerId;
