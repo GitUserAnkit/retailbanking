@@ -33,6 +33,17 @@ public class Beneficiary {
 	
 	@Column (name = "name")
 	private String name;
+	
+	public Beneficiary() {}
+
+	public Beneficiary(long id, Customer customer1, long beneficiaryAccNo, String beneficiaryIfscCode, String name) {
+		super();
+		this.id = id;
+		this.customer1 = customer1;
+		this.beneficiaryAccNo = beneficiaryAccNo;
+		this.beneficiaryIfscCode = beneficiaryIfscCode;
+		this.name = name;
+	}
 
 	/**
 	 * @return the id

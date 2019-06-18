@@ -29,12 +29,12 @@ public class Customer implements Serializable {
 	private String accountType;
 	private Double balance;
 	private String ifscCode;
-	
-	@OneToMany (mappedBy = "customer1")
-	private List<Beneficiary> beneficiary;
-	
-	@OneToMany (mappedBy = "customer2")
-	private List<Transaction> transaction;
+
+	// @OneToMany (mappedBy = "customer1")
+	// private List<Beneficiary> beneficiary;
+
+	// @OneToMany (mappedBy = "customer2")
+	// private List<Transaction> transaction;
 
 	public Customer() {
 
@@ -51,40 +51,35 @@ public class Customer implements Serializable {
 		this.balance = balance;
 		this.ifscCode = ifscCode;
 	}
-	
-	
 
 	/**
 	 * @return the beneficiary
 	 */
-	public List<Beneficiary> getBeneficiary() {
-		return beneficiary;
-	}
+	/*
+	 * public List<Beneficiary> getBeneficiary() { return beneficiary; }
+	 * 
+	 *//**
+		 * @param beneficiary the beneficiary to set
+		 */
+	/*
+	 * public void setBeneficiary(List<Beneficiary> beneficiary) { this.beneficiary
+	 * = beneficiary; }
+	 * 
+	 *//**
+		 * @return the transaction
+		 */
 
-	/**
-	 * @param beneficiary the beneficiary to set
-	 */
-	public void setBeneficiary(List<Beneficiary> beneficiary) {
-		this.beneficiary = beneficiary;
-	}
-
-	/**
-	 * @return the transaction
-	 */
-	public List<Transaction> getTransaction() {
-		return transaction;
-	}
-
-	/**
-	 * @param transaction the transaction to set
-	 */
-	public void setTransaction(List<Transaction> transaction) {
-		this.transaction = transaction;
-	}
-
-	public Long getCustomerId() {
-		return customerId;
-	}
+	/*
+	 * public List<Transaction> getTransaction() { return transaction; }
+	 * 
+	 *//**
+		 * @param transaction the transaction to set
+		 *//*
+			 * public void setTransaction(List<Transaction> transaction) { this.transaction
+			 * = transaction; }
+			 * 
+			 * public Long getCustomerId() { return customerId; }
+			 */
 
 	public void setCustomerId(Long customerId) {
 		this.customerId = customerId;
