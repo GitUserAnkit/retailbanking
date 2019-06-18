@@ -24,6 +24,8 @@ public class Beneficiary {
 	@ManyToOne
 	@JoinColumn(name = "customerId")
 	private Customer customer;
+	@ManyToOne
+	private Beneficiary beneficiary;
 	
 	@Column (name = "beneficiary_acc")
 	private long beneficiaryAccNo;

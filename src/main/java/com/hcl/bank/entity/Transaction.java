@@ -3,12 +3,16 @@ package com.hcl.bank.entity;
 import java.util.Date;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
+@Entity
+@Table
 public class Transaction {
 
 	/**
@@ -23,16 +27,15 @@ public class Transaction {
 	@JoinColumn(name = "customerId")
 	private Customer customer;
 	
-	@Column (name = "beneficiary_acc")
+	
 	private long toAccNo;
 	
-	@Column (name = "beneficiary_ifsc")
+
 	private double amountTrans ;
 	
-	@Column (name = "name")
+
 	private String description;
-	
-	@Column (name = "date")
+
 	private Date tranDate;
 
 	/**
